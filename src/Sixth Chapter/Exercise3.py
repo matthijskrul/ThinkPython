@@ -1,20 +1,24 @@
 # Write the inverse function of 2: day_num which is given a day name, and returns its number. (Tests below.)
 
+import sys
 weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-def day_name(d):
-   if 6>=int(d)>=0:
-       return weekday[d]
-   else:
-       return
 
-def day_num(n):
-    if str(n) in weekday:
-        return weekday.index(n)
+def day_name(d):
+    if 6 >= int(d) >= 0:
+        return weekday[d]
     else:
         return
 
-import sys
+
+def day_num(weekday_name):
+    for i in range(7):
+        if weekday[i] == weekday_name:
+            return i
+
+    return
+
+
 def test(did_pass):
     """  Print the result of a test.  """
     linenum = sys._getframe(1).f_lineno  # Get the caller's line number.

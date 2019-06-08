@@ -5,18 +5,18 @@
 # test(day_name(6) == "Saturday")
 # test(day_name(42) == None)
 
+import sys
+
 weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 
 def day_name(d):
-   if 6>=int(d)>=0:
-       return weekday[d]
-   else:
-       return
+    if 6 >= int(d) >= 0:
+        return weekday[d]
+    else:
+        return
 
 
-
-import sys
 def test(did_pass):
     """  Print the result of a test.  """
     linenum = sys._getframe(1).f_lineno  # Get the caller's line number.
