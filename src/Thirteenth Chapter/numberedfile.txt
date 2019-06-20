@@ -1,0 +1,37 @@
+0001 # Write a program that reads a file and writes out a new file with the lines in reversed order
+0002 # (i.e. the first line in the old file becomes the last one in the new file.)
+0003 
+0004 
+0005 def reverse_file(f):
+0006     newlines = []
+0007     file = open(f)
+0008     lines = file.readlines()
+0009     file.close()
+0010     count = 1
+0011     for line in range(len(lines)):
+0012         newline = lines[-count]
+0013         newlines.append(newline)
+0014         if count == 1:
+0015             newlines.append("\n")
+0016         count += 1
+0017     newfile = open("newf.txt", "w")
+0018     for n in newlines:
+0019         newfile.write(n)
+0020     newfile.close()
+0021 
+0022 
+0023 # alternatively:
+0024 
+0025 
+0026 def reverse_file2(f):
+0027     file = open(f)
+0028     lines = file.readlines()
+0029     file.close()
+0030     lines.reverse()
+0031     newfile = open("newfile.txt", "w")
+0032     for n in lines:
+0033         newfile.write(n)
+0034         if n == lines[0]:
+0035             newfile.write("\n")
+0036     newfile.close()
+0037 

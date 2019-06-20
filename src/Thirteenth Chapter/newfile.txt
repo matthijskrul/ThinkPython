@@ -1,0 +1,10 @@
+    print(msg)
+        msg = ("Test at line {0} FAILED.".format(linenum))
+    else:
+        msg = "Test at line {0} ok.".format(linenum)
+    if did_pass:
+    linenum = sys._getframe(1).f_lineno  # Get the caller's line number.
+    """  Print the result of a test.  """
+def test(did_pass):
+
+import sys
