@@ -9,15 +9,15 @@
 #                [ 2,  5,  7, 11, 13, 17],
 #                [13, 17, 37, 19, 23, 43] ]
 #
-# Each lotto draw takes six random balls, numbered from 1 to 49. Write a function to return a lotto draw.
-# Write a function that compares a single ticket and a draw, and returns the number of correct picks on that ticket,
+# 1) Each lotto draw takes six random balls, numbered from 1 to 49. Write a function to return a lotto draw.
+# 2) Write a function that compares a single ticket and a draw, and returns the number of correct picks on that ticket,
 # see test below.
-# Write a function that takes a list of tickets and a draw,
+# 3) Write a function that takes a list of tickets and a draw,
 # and returns a list telling how many picks were correct on each ticket. See test below.
-# Write a function that takes a list of integers, and returns the number of primes in the list.
-# Write a function to discover whether the computer scientist has missed any prime numbers
+# 4) Write a function that takes a list of integers, and returns the number of primes in the list.
+# 5) Write a function to discover whether the computer scientist has missed any prime numbers
 # in her selection of the four tickets. Return a list of all primes that she has missed.
-# Write a function that repeatedly makes a new draw, and compares the draw to the four tickets (eg count overlaps).
+# 6) Write a function that repeatedly makes a new draw, and compares the draw to the four tickets (eg count overlaps).
 
 import random
 from unit_tester import test
@@ -93,7 +93,7 @@ def primes_between(x, y):
     return primes
 
 
-def prime_misses(l):
+def prime_misses(l):  # fifth assignment
     primes = primes_between(1, 49)
     for list in l:
         for element in list:
@@ -105,7 +105,7 @@ def prime_misses(l):
 test(prime_misses(my_tickets) == [3, 29, 47])
 
 
-def draw_comparison():
+def draw_comparison():  # sixth assignment
     drawcount = 0
     while drawcount <= 20:  # or any desired number for higher success rates
         draw = lotto_6_from_49()
