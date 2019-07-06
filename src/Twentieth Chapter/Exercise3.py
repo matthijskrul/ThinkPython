@@ -45,7 +45,7 @@ def alice_words(alice):
 alice_words("C:\\Users\Matthijs\Programming\ThinkPython\src\Twentieth Chapter\\alice_in_wonderland.txt")
 
 
-#  NB: English syntax poses a problem here: omitting ' in the RE Findall method means "Alice's" is treated as
+#  NB: English syntax poses a problem here: omitting ' in the RE FindAll method means "Alice's" is treated as
 #  one instance of the word "Alice" and one instance of the word "s". It also leads to pseudowords like "doesn".
 #  Conversely, including the ' leads to the appearance of many words that open a sequence in quote marks in the text,
 #  e.g. " 'besides ". The latter seems more distorting than the former, so I have omitted the (possessive) apostrophe.
