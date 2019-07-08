@@ -1,0 +1,6 @@
+Question: does it have hooves
+Y: bird    N: horse
+Question: does it fly
+Y: dog   N: bird
+Question: can you ride it
+Y: cow   N: horse
